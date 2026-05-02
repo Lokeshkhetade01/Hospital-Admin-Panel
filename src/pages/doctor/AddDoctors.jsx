@@ -46,8 +46,6 @@ const [showPassword, setShowPassword] = useState(false);
         <form onSubmit={handleSubmit} className="p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Input Field Helper Component */}
-            {/* Input Field Helper Component */}
 {Object.keys(formData).map((key) => (
   <div key={key} className={`flex flex-col gap-1 ${key === 'about' ? 'md:col-span-2 lg:col-span-3' : ''}`}>
     <label className="text-sm font-semibold text-gray-700 capitalize">
@@ -69,6 +67,7 @@ const [showPassword, setShowPassword] = useState(false);
           // Password field ke liye type showPassword state par depend karega
           type={key === 'password' ? (showPassword ? 'text' : 'password') : (key === 'fees' || key === 'experience' ? 'number' : 'text')}
           name={key}
+          autoComplete="new-password"
           value={formData[key]}
           onChange={handleChange}
           className="w-full p-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all pr-12"
