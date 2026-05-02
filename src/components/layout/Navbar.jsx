@@ -43,11 +43,12 @@ const Navbar = () => {
             className="flex items-center gap-3 p-1 pr-3 rounded-full hover:bg-slate-50 border border-transparent hover:border-slate-100"
           >
             <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold shadow-lg shadow-blue-200">
-              AD
+             {admin ? admin.name[0] : "A"}
             </div>
             <div className="hidden lg:block text-left">
-              <p className="text-sm font-bold text-slate-800 leading-tight">Admin User</p>
-              <p className="text-[11px] font-medium text-blue-500 uppercase tracking-tighter">Super Admin</p>
+              <p className="text-sm font-bold text-slate-800 leading-tight">{admin ? admin.name : "Admin User"}</p>
+              <p className="text-sm font-bold text-slate-800 leading-tight">Super Admin</p>
+              {/* <p className="text-[11px] font-medium text-blue-500 uppercase tracking-tighter">Super Admin</p> */}
             </div>
           <ChevronDownIcon/>
           </button>
