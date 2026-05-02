@@ -31,7 +31,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 min-h-screen bg-[#002B5B] text-white flex flex-col shadow-2xl border-r border-white/5 font-sans">
+    <div className="w-64 min-h-screen  bg-slate-50 dark:bg-slate-900 text-white flex flex-col shadow-2xl border-r border-white/5 font-sans">
       
       {/* Brand Header */}
       <div className="p-8 pb-10">
@@ -78,17 +78,7 @@ const Sidebar = () => {
 
       {/* Bottom Actions */}
       <div className="p-4 mt-auto border-t border-white/5 space-y-2">
-        <NavLink
-          to="/admin/settings"
-          className={({ isActive }) => `
-            flex items-center gap-4 px-4 py-3.5 rounded-xl transition-all
-            ${isActive ? "bg-blue-600/30 text-white" : "text-slate-300 hover:bg-white/5 hover:text-white"}
-          `}
-        >
-          <Settings size={20} />
-          <span className="font-semibold text-sm">Settings</span>
-        </NavLink>
-
+       
         <button 
           onClick={handleLogout}
           className="w-full flex items-center gap-4 px-4 py-3.5 text-red-400 hover:bg-red-500/10 rounded-xl transition-all group"
@@ -96,13 +86,6 @@ const Sidebar = () => {
           <LogOut size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-semibold text-sm">Logout</span>
         </button>
-      </div>
-
-      {/* Small Branding Footer */}
-      <div className="p-6 text-center">
-        <p className="text-[10px] text-slate-500 font-bold tracking-widest uppercase opacity-40">
-          v1.0.2 Protocol
-        </p>
       </div>
     </div>
   );
