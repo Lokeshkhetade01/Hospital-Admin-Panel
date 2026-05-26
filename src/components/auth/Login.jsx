@@ -307,7 +307,7 @@ const Login = () => {
                 </>
               ) : (
                 <>
-                  <span className="relative z-10">Authorize Access</span>
+                  <span className="relative z-10">Login</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform relative z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                 </>
